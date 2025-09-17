@@ -24,8 +24,8 @@ export default function ImageDropper({ imageUri, onImageSelected }) {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={pickImage} style={styles.button}>
-        <Text>Escolher imagem</Text>
+      <TouchableOpacity onPress={pickImage} style={[styles.button, { borderColor: '#fff' }]}>
+        <Text style={{ color: '#fff' }}>Escolher imagem</Text>
       </TouchableOpacity>
       {localUri ? <Image source={{ uri: localUri }} style={styles.preview} /> : null}
     </View>
